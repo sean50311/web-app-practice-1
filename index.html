@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My Task Manager</h1>
+    </header>  
+    <main> 
+    <!-- 網頁主要內容 -->
+        <section>
+            <h2 id="new-task-heading">新增任務</h2>
+            <label for="new-task">新增任務</label>
+            <input type="text" id="new-task" name="new-task">
+            <button type="button" id="add-task">新增</button>
+        </section>
+        <section>
+            <h2 id="task-list-heading">任務列表</h2>
+            <p>篩選</p>
+                <button type="button" class="filter-btn" data-filter="all">全部</button>
+                <button type="button" class="filter-btn" data-filter="active">未完成</button>
+                <button type="button" class="filter-btn" data-filter="completed">已完成</button>
+            <ul id="task-list-container"></ul>
+            <p>任務總數: <span id="task-count">0</span></p>
+            <p>未完成任務數: <span id="active-task-count">0</span></p>
+            <p>已完成任務數: <span id="completed-task-count">0</span></p>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

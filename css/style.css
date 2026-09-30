@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 600px;
+    margin: 0 auto;  /* 置中 */
+    padding: 16px;   /* 內距，避免內容貼邊 */
+}
+
+#task-list-container {
+    list-style: none;        /* 拿掉 li 前面的圓點 */
+    padding: 0;              /* 拿掉 ul 預設的左側內縮 */
+    border: 1px solid #333;  /* 長方形外框 */
+}
+
+#task-list-container li {
+    display: flex;
+    align-items: center;     /* checkbox、文字、按鈕垂直置中 */
+    gap: 8px;
+    padding: 8px 12px;
+}
+
+#task-list-container li span {
+    flex: 1;                 /* 佔滿剩餘寬度，把刪除按鈕推到最右 */
+    text-align: left;
+    overflow-wrap: anywhere; /* 任務名稱太長時換行，不撐破框 */
+}
+
+#task-list-container {
+    min-height: 100px;       /* 設定最小高度，避免任務列表過短 */
+    background-color:#fff;
+}
+
+.filter-btn.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.filter-btn:hover {
+    background-color: #ddd;
+}
+
+.filter-btn {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    #new-task, 
+    #add-task{
+        display: block;
+        width: 100%;
+        margin-top: 8px;
+    }
+}   
